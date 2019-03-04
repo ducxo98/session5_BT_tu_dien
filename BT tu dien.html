@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT tu dien</title>
+</head>
+<body>
+<form>
+    <input type="text" id="tienganh" value="" >
+    <input type="button"  onclick="seach()" value="tìm kiếm">
+
+</form>
+<script>
+    let tienganh = ["play","game","computer","mouse"];
+    let tiengviet=["chơi","tròchơi","máytính","chuột"];
+    let index =-1;
+    function seach() {
+        let check = false;
+        let x = document.getElementById("tienganh").value;
+        for (let i = 0; i < tienganh.length; i++) {
+            if (x === tienganh[i]) {
+                check = true;
+                index=i;
+                break;
+            }
+        }
+        if (check === true) {
+            document.write(tiengviet[index])}
+        else
+            {
+                document.write(" Ko tim thấy kq")
+            }
+
+        }
+
+</script>
+
+</body>
+</html>
